@@ -1,0 +1,80 @@
+{
+  "core": {
+    "transport": {
+      "channel": {
+        "speed": {
+          "record": 5000,
+          "byte": 102400
+        }
+      }
+    }
+  },
+
+
+  "job": {
+    "setting": {
+      "speed": {
+        "record": 100000
+      },
+      "errorLimit": {
+        "record": 0,
+        "percentage": 0.02
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "username",
+            "password": "password",
+            "column": [
+              "bucket_name",
+              "timestamp" ,
+              "delta" ,
+              "cdn_in",
+              "cdn_out" ,
+              "total_request"
+            ],
+
+            "connection": [
+              {
+
+                "table": [
+                  "vip_quota"
+                ],
+                "jdbcUrl": ["jdbc:mysql://rm-tatchiji-daily.mysql.xxx.tbsite.net:3306/oss_daily"
+                ]
+              }
+            ]
+          }
+        },
+
+        "writer": {
+          "name": "otswriter",
+          "parameter": {
+            "endpoint":"https://smoke-test-gov.xxx.ots.aliyuncs.com",
+            "accessId":"accessid",
+            "accessKey":"accesskey",
+            "instanceName":"smoke-test-gov",
+            "table":"vip_quota",
+            "primaryKey":[
+              {"name":"bucket_name", "type":"string"},
+              {"name":"delta", "type":"int"},
+              {"name":"timestamp", "type":"int"}
+            ],
+            "column":[
+              {"name":"haha","type":"int"},
+              {"name":"hahah","type":"int"},
+              {"name":"kengdie","type":"int"}
+            ],
+            "writeMode":"UpdateRow",
+            "batchWriteCount":100
+          }
+        }
+
+      }
+    ]
+  }
+}
+

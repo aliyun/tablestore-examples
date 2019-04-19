@@ -1,6 +1,7 @@
 # Aliyun TableStore Examples
 
 [![License Status](https://img.shields.io/badge/license-apache2-brightgreen.svg)](https://travis-ci.org/aliyun/aliyun-tablestore-nodejs-sdk)
+## [Click here for the English README](README_EN.md)
 
 **目录**
 - [1、项目结构](#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
@@ -18,9 +19,8 @@
 
 
 # 1、项目结构
-- 根据常用语言，分为3个模块(场景样例/迁移、计算等工具/SDK基础功能)，
-- 每个模块拆分语言目录：java/go/node/python...
-- 语言下每个项目名下对应独立的Example项目
+- 根据功能，分为3个模块(场景样例/迁移、计算等工具/SDK基础功能)，
+- 每个项目名下对应独立的Example项目
 
 ```
 ├── README.md
@@ -30,6 +30,7 @@
 │   └── WifiMonitor
 │
 ├── tools                                   (工具/产品)
+│   └── Datax-MySQL2TableStore
 │
 └── usages                                  (SDK基础功能)
 ```
@@ -64,12 +65,15 @@
 样例 | 语言 | 项目名
 --- | --- | ---
 [气象格点数据解决方案](https://yq.aliyun.com/articles/698313) | java | [TableStore-Grid](/demos/TableStore-Grid)
-基于Timestream的Wifi监控系统 | java | [WifiMonitor](/demos/WifiMonitor)
-基于Timestream的快递轨迹管理 | java | [MailManagement](/demos/MailManagement)
+[基于Timestream的Wifi监控系统](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
+[基于Timestream的快递轨迹管理](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
 
 ## usages(SDK基础功能)
 
 ## tools(迁移、计算等工具)
+场景 | 工具 | 项目名
+--- | --- | ---
+MySQL数据迁移表格存储 | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
 
 
 
@@ -86,4 +90,4 @@
 - 群号: 11789671
 - 二维码:
 
-![二维码](http://console-demo.oss-cn-beijing.aliyuncs.com/marker.png?x-oss-process=image/resize,h_400)
+![二维码](image/QRcode.png)
