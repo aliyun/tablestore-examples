@@ -24,15 +24,16 @@
 
 ```
 ├── README.md
-├── demos                                   (场景样例)
-│   ├── TableStore-Grid                     (气象格点数据解决方案)
-│   ├── MailManagement
-│   └── WifiMonitor
+├── demos                                   #场景样例
+│   ├── TableStore-Grid                     #气象格点数据解决方案
+│   ├── TraceMedicine                       #药品监管（溯源）系统
+│   ├── MailManagement                      #基于Timestream的快递轨迹管理
+│   └── WifiMonitor                         #基于Timestream的Wifi监控系统
 │
-├── tools                                   (工具/产品)
+├── tools                                   #工具/产品
 │   └── Datax-MySQL2TableStore
 │
-└── usages                                  (SDK基础功能)
+└── usages                                  #SDK基础功能
 ```
 
 # 2、开通与配置
@@ -67,6 +68,7 @@
 [气象格点数据解决方案](https://yq.aliyun.com/articles/698313) | java | [TableStore-Grid](/demos/TableStore-Grid)
 [基于Timestream的Wifi监控系统](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [基于Timestream的快递轨迹管理](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
+药品监管（溯源）系统 | java | [TraceMedicine](/demos/TraceMedicine)
 
 ## usages(SDK基础功能)
 

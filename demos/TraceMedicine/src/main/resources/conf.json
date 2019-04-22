@@ -1,0 +1,4 @@
+{
+  "metaTableName":"medicine_meta",
+  "dataTableName":"medicine_data"
+}

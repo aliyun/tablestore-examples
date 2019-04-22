@@ -24,15 +24,16 @@
 
 ```
 ├── README.md
-├── demos                                   (samples)
+├── demos                                   #samples
 │   ├── TableStore-Grid
+│   ├── TraceMedicine
 │   ├── MailManagement
 │   └── WifiMonitor
 │
-├── tools                                   (tools)
+├── tools                                   #tools
 │   └── Datax-MySQL2TableStore
 │
-└── usages                                  (the usage of SDK)
+└── usages                                  #the usage of SDK
 ```
 
 # 2.Get Start
@@ -67,6 +68,7 @@ Sample Name | Language | Title
 [Store and query gridded data](https://yq.aliyun.com/articles/698313) | java | [TableStore-Grid](/demos/TableStore-Grid)
 [Equipment monitoring and management](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [Express track management](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
+Medicine track management | java | [TraceMedicine](/demos/TraceMedicine)
 
 ## usages(SDK)
 
