@@ -66,8 +66,8 @@
 ## [demos(场景样例)](/demos)
 样例 | 语言 | 项目名
 --- | --- | ---
-保险单管理系统 | java | [insurance-policy-management](/demos/insurance-policy-management)
-药品监管（溯源）系统 | java | [TraceMedicine](/demos/TraceMedicine)
+[保险单管理系统](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
+[药品监管（溯源）系统](https://yq.aliyun.com/articles/699636) | java | [TraceMedicine](/demos/TraceMedicine)
 [气象格点数据解决方案](https://yq.aliyun.com/articles/698313) | java | [TableStore-Grid](/demos/TableStore-Grid)
 [基于Timestream的Wifi监控系统](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [基于Timestream的快递轨迹管理](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)

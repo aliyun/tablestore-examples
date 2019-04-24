@@ -66,8 +66,8 @@ Create the file tablestoreCong.json in the home path, and config the parameters.
 ## [demos(samples)](/demos)
 Sample Name | Language | Title
 --- | --- | ---
-Insurance policy management | java | [insurance-policy-management](/demos/insurance-policy-management)
-Medicine track management | java | [TraceMedicine](/demos/TraceMedicine)
+[Insurance policy management](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
+[Medicine track management](https://yq.aliyun.com/articles/699636) | java | [TraceMedicine](/demos/TraceMedicine)
 [Store and query gridded data](https://yq.aliyun.com/articles/698313) | java | [TableStore-Grid](/demos/TableStore-Grid)
 [Equipment monitoring and management](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [Express track management](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
