@@ -9,9 +9,9 @@
   - [Open Service](#%E5%BC%80%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E8%8E%B7%E5%8F%96ak)
   - [Config](#%E5%AE%8C%E6%88%90%E9%85%8D%E7%BD%AE)
 - [3.Modules](#3%E6%A0%B7%E4%BE%8B%E7%BB%9F%E8%AE%A1)
-  - [usages(SDK)](#usagessdk%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD)
   - [demos(samples)](#demos%E5%9C%BA%E6%99%AF%E6%A0%B7%E4%BE%8B)
   - [tools(tools)](#tools%E8%BF%81%E7%A7%BB%E8%AE%A1%E7%AE%97%E7%AD%89%E5%B7%A5%E5%85%B7)
+  - [feature(SDK)](#featuresdk%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD)
 - [4.Remind](#4%E4%BD%BF%E7%94%A8%E6%8F%90%E9%86%92)
   - [Release resources](#%E8%B5%84%E6%BA%90%E9%87%8A%E6%94%BE)
 - [5.Advisory and Feedback](#5%E5%92%A8%E8%AF%A2%E7%AD%94%E7%96%91%E5%8F%8D%E9%A6%88)
@@ -25,6 +25,7 @@
 ```
 ├── README.md
 ├── demos                                   #samples
+│   ├── SharingCarManagement
 │   ├── SportTrack
 │   ├── insurance-policy-management
 │   ├── TraceMedicine
@@ -35,7 +36,8 @@
 ├── tools                                   #tools
 │   └── Datax-MySQL2TableStore
 │
-└── usages                                  #the usage of SDK
+└── feature                                 #usage of feature
+    └── FuzzySearch
 ```
 
 # 2.Get Start
@@ -65,8 +67,9 @@ Create the file tablestoreCong.json in the home path, and config the parameters.
 # 3.Modules
 
 ## [demos(samples)](/demos)
-Sample Name | Language | Title
+Sample Name | Language | Project
 --- | --- | ---
+[Sharing car management](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [Sport track management](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [Insurance policy management](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
 [Medicine track management](https://yq.aliyun.com/articles/699636) | java | [TraceMedicine](/demos/TraceMedicine)
@@ -74,12 +77,15 @@ Sample Name | Language | Title
 [Equipment monitoring and management](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [Express track management](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
 
-## usages(SDK)
-
 ## tools(tools)
-Application | Tool Name | Title
+Application | Tool Name | Project
 --- | --- | ---
-Data Migration from MySQL to Tablestore | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
+[Data Migration from MySQL to Tablestore](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
+
+## feature(SDK基础功能)
+Feature | Language(SDK) | Project
+--- | --- | ---
+Fuzzy search | java | [FuzzySearch](/feature/FuzzySearch)
 
 
 

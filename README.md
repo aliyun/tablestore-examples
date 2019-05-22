@@ -9,9 +9,9 @@
   - [开通服务、创建实例、获取AK](#%E5%BC%80%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E8%8E%B7%E5%8F%96ak)
   - [完成配置](#%E5%AE%8C%E6%88%90%E9%85%8D%E7%BD%AE)
 - [3、样例统计](#3%E6%A0%B7%E4%BE%8B%E7%BB%9F%E8%AE%A1)
-  - [usages(SDK基础功能)](#usagessdk%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD)
   - [demos(场景样例)](#demos%E5%9C%BA%E6%99%AF%E6%A0%B7%E4%BE%8B)
   - [tools(迁移、计算等工具)](#tools%E8%BF%81%E7%A7%BB%E8%AE%A1%E7%AE%97%E7%AD%89%E5%B7%A5%E5%85%B7)
+  - [feature(SDK基础功能)](#featuresdk%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD)
 - [4、使用提醒](#4%E4%BD%BF%E7%94%A8%E6%8F%90%E9%86%92)
   - [资源释放](#%E8%B5%84%E6%BA%90%E9%87%8A%E6%94%BE)
 - [5、咨询/答疑/反馈](#5%E5%92%A8%E8%AF%A2%E7%AD%94%E7%96%91%E5%8F%8D%E9%A6%88)
@@ -25,6 +25,7 @@
 ```
 ├── README.md
 ├── demos                                   #场景样例
+│   ├── SharingCarManagement                #共享汽车管理
 │   ├── SportTrack                          #运动轨迹
 │   ├── insurance-policy-management         #保险单管理系统
 │   ├── TraceMedicine                       #药品监管（溯源）系统
@@ -35,7 +36,8 @@
 ├── tools                                   #工具/产品
 │   └── Datax-MySQL2TableStore
 │
-└── usages                                  #SDK基础功能
+└── feature                                 #SDK基础功能
+    └── FuzzySearch                         #模糊查询
 ```
 
 # 2、开通与配置
@@ -67,6 +69,7 @@
 ## [demos(场景样例)](/demos)
 样例 | 语言 | 项目名
 --- | --- | ---
+[共享汽车管理](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [运动轨迹管理](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [保险单管理系统](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
 [药品监管（溯源）系统](https://yq.aliyun.com/articles/699636) | java | [TraceMedicine](/demos/TraceMedicine)
@@ -74,13 +77,15 @@
 [基于Timestream的Wifi监控系统](https://yq.aliyun.com/articles/698591) | java | [WifiMonitor](/demos/WifiMonitor)
 [基于Timestream的快递轨迹管理](https://yq.aliyun.com/articles/698551) | java | [MailManagement](/demos/MailManagement)
 
-## usages(SDK基础功能)
-
 ## tools(迁移、计算等工具)
 场景 | 工具 | 项目名
 --- | --- | ---
-MySQL数据迁移表格存储 | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
+[MySQL数据迁移表格存储](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
 
+## feature(SDK基础功能)
+功能 | 语言(SDK) | 项目名
+--- | --- | ---
+模糊查询 | java | [FuzzySearch](/feature/FuzzySearch)
 
 
 # 4、使用提醒
