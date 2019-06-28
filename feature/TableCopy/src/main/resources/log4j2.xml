@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <Appenders>
+        <RollingFile name="RollingFile" fileName="./logs/aliyun-tablestore.log"
+                     immediateFlush="false"
+                     filePattern="logs/$${date:yyyy-MM}/aliyun-tablestore-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy
+                        size="250 MB"/>
+            </Policies>
+        </RollingFile>
+        <Console name="STDOUT">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+        </Console>
+        <Async name="Async">
+            <AppenderRef ref="RollingFile"/>
+            <!--AppenderRef ref="STDOUT" /-->
+        </Async>
+    </Appenders>
+    <Loggers>
+        <AsyncRoot level="debug">
+            <AppenderRef ref="Async"/>
+        </AsyncRoot>
+    </Loggers>
+</configuration>

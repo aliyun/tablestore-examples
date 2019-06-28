@@ -37,6 +37,7 @@
 │   └── Datax-MySQL2TableStore
 │
 └── feature                                 #SDK基础功能
+    ├── TableCopy                           #数据复制（表级别）
     └── FuzzySearch                         #模糊查询
 ```
 
@@ -85,6 +86,7 @@
 ## feature(SDK基础功能)
 功能 | 语言(SDK) | 项目名
 --- | --- | ---
+表级别数据复制 | java | [TableCopy](/feature/TableCopy)
 模糊查询 | java | [FuzzySearch](/feature/FuzzySearch)
 
 

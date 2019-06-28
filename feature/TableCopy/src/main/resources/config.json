@@ -1,0 +1,19 @@
+{
+  "ots-reader": {
+    "endpoint": "https://zhuoran-high.cn-hangzhou.ots.aliyuncs.com",
+    "instanceName": "zhuoran-high",
+    "tableName": "test_table",
+    "accessId": "",
+    "accessKey": "",
+    "tunnelName": "testTunnel2",
+    "endTime": "2019-06-19 20:22:00"
+  },
+  "ots-writer": {
+    "endpoint": "https://zhuoran-search.cn-hangzhou.ots.aliyuncs.com",
+    "instanceName": "zhuoran-search",
+    "tableName": "testDstTable2",
+    "accessId": "",
+    "accessKey": "",
+    "batchWriteCount": 100
+  }
+}

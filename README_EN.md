@@ -37,6 +37,7 @@
 │   └── Datax-MySQL2TableStore
 │
 └── feature                                 #usage of feature
+    ├── TableCopy
     └── FuzzySearch
 ```
 
@@ -85,6 +86,7 @@ Application | Tool Name | Project
 ## feature(SDK基础功能)
 Feature | Language(SDK) | Project
 --- | --- | ---
+Table Copy | java | [TableCopy](/feature/TableCopy)
 Fuzzy search | java | [FuzzySearch](/feature/FuzzySearch)
 
 
