@@ -34,6 +34,7 @@
 │   └── WifiMonitor
 │
 ├── tools                                   #tools
+│   ├── Dts-MySQL2TableStore
 │   └── Datax-MySQL2TableStore
 │
 └── feature                                 #usage of feature
@@ -82,6 +83,7 @@ Sample Name | Language | Project
 Application | Tool Name | Project
 --- | --- | ---
 [Data Migration from MySQL to Tablestore](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
+Migrate incrementing data from MySQL to Tablestore | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
 ## feature(SDK基础功能)
 Feature | Language(SDK) | Project

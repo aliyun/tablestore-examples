@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <!-- log4j:configuration必须指定标签的顺序： appender，logger，root-->
+    <!-- 日志输出到控制台 -->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5p] [%t] [%c:%L] - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- 日志输出到dts-subscribe.log文件 -->
+    <appender name="MyFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="Threshold" value="INFO"/>
+        <param name="Append" value="true"/>
+        <param name="File" value="dts-subscribe.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5p] [%t] [%c:%L] - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- logger设置指定SDK中com.aliyun.drc包下的日志输出，additivity默认为true-->
+    <logger name="com.aliyun.drc" additivity="true">
+        <level value ="INFO"/>
+        <appender-ref ref="MyFileAppender" />
+    </logger>
+
+    <!-- 根root INFO级别日志输出到CONSOLE -->
+    <root>
+        <level value ="INFO" />
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</log4j:configuration>

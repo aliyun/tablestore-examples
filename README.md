@@ -34,7 +34,8 @@
 │   └── WifiMonitor                         #基于Timestream的Wifi监控系统
 │
 ├── tools                                   #工具/产品
-│   └── Datax-MySQL2TableStore
+│   ├── Dts-MySQL2TableStore                #MySQL增量数据迁移表格存储
+│   └── Datax-MySQL2TableStore              #MySQL数据迁移表格存储
 │
 └── feature                                 #SDK基础功能
     ├── TableCopy                           #数据复制（表级别）
@@ -82,6 +83,7 @@
 场景 | 工具 | 项目名
 --- | --- | ---
 [MySQL数据迁移表格存储](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
+MySQL增量数据导入表格存储 | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
 ## feature(SDK基础功能)
 功能 | 语言(SDK) | 项目名
