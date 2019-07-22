@@ -25,6 +25,7 @@
 ```
 ├── README.md
 ├── demos                                   #场景样例
+│   ├── IMChart                             #即时聊天系统
 │   ├── SharingCarManagement                #共享汽车管理
 │   ├── SportTrack                          #运动轨迹
 │   ├── insurance-policy-management         #保险单管理系统
@@ -71,6 +72,7 @@
 ## [demos(场景样例)](/demos)
 样例 | 语言 | 项目名
 --- | --- | ---
+即时聊天系统 | java | [IMChart](/demos/ImChart)
 [共享汽车管理](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [运动轨迹管理](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [保险单管理系统](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)

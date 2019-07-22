@@ -25,6 +25,7 @@
 ```
 ├── README.md
 ├── demos                                   #samples
+│   ├── IMChart
 │   ├── SharingCarManagement
 │   ├── SportTrack
 │   ├── insurance-policy-management
@@ -71,6 +72,7 @@ Create the file tablestoreCong.json in the home path, and config the parameters.
 ## [demos(samples)](/demos)
 Sample Name | Language | Project
 --- | --- | ---
+Instant Chart Room(IM) | java | [IMChart](/demos/ImChart)
 [Sharing car management](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [Sport track management](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [Insurance policy management](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
