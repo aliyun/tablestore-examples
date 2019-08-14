@@ -1,0 +1,22 @@
+#!/bin/bash
+
+bin=`dirname "$0"`
+cd "${bin}/.."
+
+home=`pwd`
+CLASSPATH="${home}/libs"
+
+LOG="${home}/log"
+CONF="${home}/conf"
+
+for f in $CLASSPATH/*.jar;
+do  CLASSPATH=${CLASSPATH}:$f;
+done
+CLASSPATH=${home}/conf/:${CLASSPATH};
+
+if [ ! -x "$LOG" ];
+then
+ mkdir "$LOG"
+fi
+
+java -classpath ".:${CLASSPATH}" -Xms1g -Xmx2g  com.aliyun.tablestore.examples.WriteData "$@"
