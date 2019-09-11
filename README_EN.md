@@ -40,7 +40,8 @@
 │
 └── feature                                 #usage of feature
     ├── TableCopy
-    └── FuzzySearch
+    ├── FuzzySearch
+    └── AggregationAndGroupBy
 ```
 
 # 2.Get Start
@@ -72,7 +73,7 @@ Create the file tablestoreCong.json in the home path, and config the parameters.
 ## [demos(samples)](/demos)
 Sample Name | Language | Project
 --- | --- | ---
-Instant Chart Room(IM) | java | [IMChart](/demos/ImChart)
+[Instant Chart Room(IM)](https://yq.aliyun.com/articles/710363) | java | [IMChart](/demos/ImChart)
 [Sharing car management](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [Sport track management](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [Insurance policy management](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
@@ -85,14 +86,14 @@ Instant Chart Room(IM) | java | [IMChart](/demos/ImChart)
 Application | Tool Name | Project
 --- | --- | ---
 [Data Migration from MySQL to Tablestore](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
-Migrate incrementing data from MySQL to Tablestore | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
+[Migrate incrementing data from MySQL to Tablestore](https://yq.aliyun.com/articles/708325) | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
 ## feature(SDK基础功能)
 Feature | Language(SDK) | Project
 --- | --- | ---
-Table Copy | java | [TableCopy](/feature/TableCopy)
-Fuzzy search | java | [FuzzySearch](/feature/FuzzySearch)
-
+[Table Copy](https://yq.aliyun.com/articles/706791) | java | [TableCopy](/feature/TableCopy)
+[Fuzzy search](https://yq.aliyun.com/articles/703707) | java | [FuzzySearch](/feature/FuzzySearch)
+Aggregation & GroupBy | java | [AggregationAndGroupBy](/feature/AggregationAndGroupBy)
 
 
 # 4.Remind

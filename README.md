@@ -40,7 +40,8 @@
 │
 └── feature                                 #SDK基础功能
     ├── TableCopy                           #数据复制（表级别）
-    └── FuzzySearch                         #模糊查询
+    ├── FuzzySearch                         #模糊查询
+    └── AggregationAndGroupBy               #统计聚合
 ```
 
 # 2、开通与配置
@@ -72,7 +73,7 @@
 ## [demos(场景样例)](/demos)
 样例 | 语言 | 项目名
 --- | --- | ---
-即时聊天系统 | java | [IMChart](/demos/ImChart)
+[即时聊天系统](https://yq.aliyun.com/articles/710363) | java | [IMChart](/demos/ImChart)
 [共享汽车管理](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [运动轨迹管理](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
 [保险单管理系统](https://yq.aliyun.com/articles/699669) | java | [insurance-policy-management](/demos/insurance-policy-management)
@@ -85,13 +86,14 @@
 场景 | 工具 | 项目名
 --- | --- | ---
 [MySQL数据迁移表格存储](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
-MySQL增量数据导入表格存储 | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
+[MySQL增量数据导入表格存储](https://yq.aliyun.com/articles/708325) | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
 ## feature(SDK基础功能)
 功能 | 语言(SDK) | 项目名
 --- | --- | ---
-表级别数据复制 | java | [TableCopy](/feature/TableCopy)
-模糊查询 | java | [FuzzySearch](/feature/FuzzySearch)
+[表级别数据复制](https://yq.aliyun.com/articles/706791) | java | [TableCopy](/feature/TableCopy)
+[模糊查询](https://yq.aliyun.com/articles/703707) | java | [FuzzySearch](/feature/FuzzySearch)
+统计聚合 | java | [AggregationAndGroupBy](/feature/AggregationAndGroupBy)
 
 
 # 4、使用提醒
