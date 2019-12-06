@@ -15,16 +15,7 @@ Tablestore java sdk.
 <dependency>
     <groupId>com.aliyun.openservices</groupId>
     <artifactId>tablestore</artifactId>
-    <version>4.12.0</version>
-</dependency>
-```
- 
-JSON parsing tool for parsing config and jsonizing java bean.
-```xml
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.9.8</version>
+    <version>5.3.0</version>
 </dependency>
 ```
 
@@ -35,20 +26,17 @@ JSON parsing tool for parsing config and jsonizing java bean.
     └── com
         └── aliyun
             └── tablestore
-                └── example
+                └── basic
                     ├── BaseExample.java                   # Example base class
                     ├── GlobalIndexCRDExample.java         # Basic operations of Tablestore Global Index :)
-                    ├── consts
-                    │   └── ColumnConsts.java              # Column names
-                    ├── model
-                    │   └── CallDO.java                    # Domain object
-                    └── utils
-                        ├── ClientAndConfig.java           # TableStore related config
-                        └── Utils.java                     # Common Utils
+                    ├── common
+                    │   └── Consts.java                    # Consts
+                    └── model
+                        └── CallDO.java                    # Domain object
 ```
 
 # Setup environment & Example
-Run the main method in class  [`GlobalIndexCRDExample`](src/main/java/com/aliyun/tablestore/example/GlobalIndexCRDExample.java), the table & index would be created, mock data inserted, along with queries.
+Run the main method in class  [`GlobalIndexCRDExample`](src/main/java/com/aliyun/tablestore/basic/GlobalIndexCRDExample.java), the table & index would be created, mock data inserted, along with queries.
 
 ### createTableWithGlobalIndex
 create table & global index at the same time

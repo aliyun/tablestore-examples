@@ -13,21 +13,16 @@ import static com.aliyun.tablestore.basic.common.Consts.*;
 public class BaseAutoIncManage {
     protected Config config;
     protected SyncClient syncClient;
-    private String pathSeperator = "/";
+    private String pathSeparator = "/";
 
     public BaseAutoIncManage() {
         String os = System.getProperty("os.name");
         if (os.toLowerCase().startsWith("win")) {
-            pathSeperator = "\\";
+            pathSeparator = "\\";
         }
-        config = Config.newInstance(System.getProperty("user.home") + pathSeperator + "tablestoreConf.json");
+        config = Config.newInstance(System.getProperty("user.home") + pathSeparator + "tablestoreConf.json");
 
-        syncClient = new SyncClient(
-                config.getEndpoint(),
-                config.getAccessId(),
-                config.getAccessKey(),
-                config.getInstanceName()
-        );
+        syncClient = config.newClient();
 
         tryInitTable(syncClient);
     }

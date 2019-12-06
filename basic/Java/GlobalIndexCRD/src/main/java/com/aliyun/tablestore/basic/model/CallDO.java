@@ -1,10 +1,9 @@
-package com.aliyun.tablestore.example.model;
+package com.aliyun.tablestore.basic.model;
 
 import com.alicloud.openservices.tablestore.model.*;
-import com.aliyun.tablestore.example.utils.Utils;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.gson.Gson;
 
-import static com.aliyun.tablestore.example.consts.ColumnConsts.*;
+import static com.aliyun.tablestore.basic.common.Consts.*;
 
 public class CallDO {
 
@@ -120,10 +119,6 @@ public class CallDO {
 
     @Override
     public String toString() {
-        try {
-            return Utils.OBJECT_MAPPER.writeValueAsString(this);
-        } catch (JsonProcessingException e) {
-            return super.toString();
-        }
+        return new Gson().toJson(this);
     }
 }

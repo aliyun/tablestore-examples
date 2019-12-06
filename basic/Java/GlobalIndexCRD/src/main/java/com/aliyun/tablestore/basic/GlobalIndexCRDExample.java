@@ -1,31 +1,29 @@
-package com.aliyun.tablestore.example;
+package com.aliyun.tablestore.basic;
 
 import com.alicloud.openservices.tablestore.model.*;
 import com.alicloud.openservices.tablestore.model.search.SearchResponse;
-import com.aliyun.tablestore.example.model.CallDO;
-import com.aliyun.tablestore.example.utils.ClientAndConfig;
-import com.aliyun.tablestore.example.utils.Utils;
+import com.aliyun.tablestore.basic.common.Config;
+import com.aliyun.tablestore.basic.model.CallDO;
 
 import java.util.Arrays;
-import java.util.List;
 
-import static com.aliyun.tablestore.example.consts.ColumnConsts.*;
+import static com.aliyun.tablestore.basic.common.Consts.*;
 
 public class GlobalIndexCRDExample extends BaseExample {
 
-    public GlobalIndexCRDExample(ClientAndConfig clientAndConfig) {
-        super(clientAndConfig);
+    public GlobalIndexCRDExample(Config config) {
+        super(config);
     }
 
     private void createTableWithGlobalIndex() {
         //二级索引IndexMeta
-        IndexMeta indexMeta = new IndexMeta(indexName);
+        IndexMeta indexMeta = new IndexMeta(INDEX_NAME);
         indexMeta.addPrimaryKeyColumn(CALLED_NUMBER);       //将主表的预定义列"called_number"作为二级索引表的pk列
         //此时会自动补齐二级索引表的剩余两个pk列: "cell_number", "start_time"
         indexMeta.addDefinedColumn(BASE_STATION_NUMBER);    //将主表的预定义列"base_station_number"作为二级索引表的属性列
 
         //创建主表时，同时创建索引表
-        TableMeta tableMeta = new TableMeta(tableName);
+        TableMeta tableMeta = new TableMeta(TABLE_NAME);
 
         tableMeta.addPrimaryKeyColumn(CELL_NUMBER, PrimaryKeyType.INTEGER);
         tableMeta.addPrimaryKeyColumn(START_TIME, PrimaryKeyType.INTEGER);
@@ -41,7 +39,7 @@ public class GlobalIndexCRDExample extends BaseExample {
     }
 
     private void createTable() {
-        TableMeta tableMeta = new TableMeta(tableName);
+        TableMeta tableMeta = new TableMeta(TABLE_NAME);
 
         tableMeta.addPrimaryKeyColumn(CELL_NUMBER, PrimaryKeyType.INTEGER);
         tableMeta.addPrimaryKeyColumn(START_TIME, PrimaryKeyType.INTEGER);
@@ -57,26 +55,26 @@ public class GlobalIndexCRDExample extends BaseExample {
     }
 
     private void createGlobalIndex() {
-        IndexMeta indexMeta = new IndexMeta(indexName);
+        IndexMeta indexMeta = new IndexMeta(INDEX_NAME);
         indexMeta.addPrimaryKeyColumn(CALLED_NUMBER);       //将主表的预定义列"called_number"作为二级索引表的pk列
                                                             //此时会自动补齐二级索引表的剩余两个pk列: "cell_number", "start_time"
         indexMeta.addDefinedColumn(BASE_STATION_NUMBER);    //将主表的预定义列"base_station_number"作为二级索引表的属性列
 
         //全局二级索引索引创建请求(includeBaseData为true表示先同步主表全量数据，再同步增量数据; includeBaseData为false表示只同步增量数据)
-        CreateIndexRequest request = new CreateIndexRequest(tableName, indexMeta, true);
+        CreateIndexRequest request = new CreateIndexRequest(TABLE_NAME, indexMeta, true);
 
         //创建全局二级索引
         syncClient.createIndex(request);
-        System.out.println("Create Global Index " + indexName + " success");
+        System.out.println("Create Global Index " + INDEX_NAME + " success");
     }
 
     private void deleteGlobalIndex() {
-        DeleteIndexRequest request = new DeleteIndexRequest(tableName, indexName);
+        DeleteIndexRequest request = new DeleteIndexRequest(TABLE_NAME, INDEX_NAME);
         syncClient.deleteIndex(request);
     }
 
     private void deleteTable() {
-        DeleteTableRequest request = new DeleteTableRequest(tableName);
+        DeleteTableRequest request = new DeleteTableRequest(TABLE_NAME);
         syncClient.deleteTable(request);
     }
 
@@ -90,7 +88,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(60L);
             callDO.setBaseStationNumber(1L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
         {
             CallDO callDO = new CallDO();
@@ -100,7 +98,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(10L);
             callDO.setBaseStationNumber(1L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
         {
             CallDO callDO = new CallDO();
@@ -110,7 +108,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(20L);
             callDO.setBaseStationNumber(3L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
         {
             CallDO callDO = new CallDO();
@@ -120,7 +118,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(5L);
             callDO.setBaseStationNumber(2L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
         {
             CallDO callDO = new CallDO();
@@ -130,7 +128,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(100L);
             callDO.setBaseStationNumber(2L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
         {
             CallDO callDO = new CallDO();
@@ -140,7 +138,7 @@ public class GlobalIndexCRDExample extends BaseExample {
             callDO.setDuration(200L);
             callDO.setBaseStationNumber(3L);
 
-            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(tableName));
+            batchWriteRowRequest.addRowChange(callDO.toRowPutChange(TABLE_NAME));
         }
 
         syncClient.batchWriteRow(batchWriteRowRequest);
@@ -161,7 +159,7 @@ public class GlobalIndexCRDExample extends BaseExample {
      * 查询号码123456的被叫话单
      */
     private void queryCalledNumber() {
-        RangeRowQueryCriteria rangeRowQueryCriteria = new RangeRowQueryCriteria(indexName);
+        RangeRowQueryCriteria rangeRowQueryCriteria = new RangeRowQueryCriteria(INDEX_NAME);
 
         long calledNumber = 123456L;
 
@@ -199,7 +197,7 @@ public class GlobalIndexCRDExample extends BaseExample {
     }
 
     private void listGlobalIndex() {
-        DescribeTableRequest request = new DescribeTableRequest(tableName);
+        DescribeTableRequest request = new DescribeTableRequest(TABLE_NAME);
         DescribeTableResponse response = syncClient.describeTable(request);
         for (IndexMeta indexMeta : response.getIndexMeta()) {
             System.out.println(indexMeta.getIndexName());
@@ -207,7 +205,7 @@ public class GlobalIndexCRDExample extends BaseExample {
     }
 
     private void describeGlobalIndex() {
-        DescribeTableResponse response = syncClient.describeTable(new DescribeTableRequest(indexName));
+        DescribeTableResponse response = syncClient.describeTable(new DescribeTableRequest(INDEX_NAME));
         System.out.println(response.getTableMeta());
     }
 
@@ -232,6 +230,6 @@ public class GlobalIndexCRDExample extends BaseExample {
     }
 
     public static void main(String[] args) {
-        new GlobalIndexCRDExample(Utils.getClientAndConfig(args)).main();
+        new GlobalIndexCRDExample(Config.newInstance()).main();
     }
 }

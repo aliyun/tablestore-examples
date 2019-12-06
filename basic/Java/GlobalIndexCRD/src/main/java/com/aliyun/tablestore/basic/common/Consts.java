@@ -1,9 +1,13 @@
-package com.aliyun.tablestore.example.consts;
+package com.aliyun.tablestore.basic.common;
 
 /**
  * @author Sam
  */
-public interface ColumnConsts {
+public interface Consts {
+
+    String TABLE_NAME = "global_index_example_table";
+    String INDEX_NAME = "global_index_example_index";
+
     // pk columns
     String CELL_NUMBER = "cell_number";
     String START_TIME = "start_time";

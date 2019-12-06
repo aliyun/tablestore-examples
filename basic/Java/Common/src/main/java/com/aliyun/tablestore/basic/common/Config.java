@@ -1,5 +1,6 @@
 package com.aliyun.tablestore.basic.common;
 
+import com.alicloud.openservices.tablestore.SyncClient;
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 
@@ -24,6 +25,24 @@ public class Config {
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
+    }
+
+    public static Config newInstance() {
+        String os = System.getProperty("os.name");
+        String pathSeparator = "/";
+        if (os.toLowerCase().startsWith("win")) {
+            pathSeparator = "\\";
+        }
+        return newInstance(System.getProperty("user.home") + pathSeparator + "tablestoreConf.json");
+    }
+
+    public SyncClient newClient() {
+        return  new SyncClient(
+                getEndpoint(),
+                getAccessId(),
+                getAccessKey(),
+                getInstanceName()
+        );
     }
 
     public String getEndpoint() {
