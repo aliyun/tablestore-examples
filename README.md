@@ -88,12 +88,17 @@
 [MySQL数据迁移表格存储](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
 [MySQL增量数据导入表格存储](https://yq.aliyun.com/articles/708325) | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
-## feature(SDK基础功能)
+## feature(Tablestore功能)
 功能 | 语言(SDK) | 项目名
 --- | --- | ---
 [表级别数据复制](https://yq.aliyun.com/articles/706791) | java | [TableCopy](/feature/TableCopy)
 [模糊查询](https://yq.aliyun.com/articles/703707) | java | [FuzzySearch](/feature/FuzzySearch)
 统计聚合 | java | [AggregationAndGroupBy](/feature/AggregationAndGroupBy)
+
+## basic(SDK基础使用)
+功能 | 语言(SDK) | 项目名
+--- | --- | ---
+基础使用 | java | [Java SDK 使用](/basic/Java)
 
 
 # 4、使用提醒

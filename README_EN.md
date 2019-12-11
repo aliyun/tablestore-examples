@@ -88,13 +88,17 @@ Application | Tool Name | Project
 [Data Migration from MySQL to Tablestore](https://yq.aliyun.com/articles/698973) | datax | [Datax-MySQL2TableStore](/tools/Datax-MySQL2TableStore)
 [Migrate incrementing data from MySQL to Tablestore](https://yq.aliyun.com/articles/708325) | DTS | [Dts-MySQL2TableStore](/tools/Dts-MySQL2TableStore)
 
-## feature(SDK基础功能)
+## feature(Tablestore feature)
 Feature | Language(SDK) | Project
 --- | --- | ---
 [Table Copy](https://yq.aliyun.com/articles/706791) | java | [TableCopy](/feature/TableCopy)
 [Fuzzy search](https://yq.aliyun.com/articles/703707) | java | [FuzzySearch](/feature/FuzzySearch)
 Aggregation & GroupBy | java | [AggregationAndGroupBy](/feature/AggregationAndGroupBy)
 
+## basic(basic usage of SDK)
+Usage | Language(SDK) | Project
+--- | --- | ---
+basic usage | java | [basic usage of SDK](/basic/Java)
 
 # 4.Remind
 
