@@ -54,8 +54,8 @@
 ## Configuration
 Create the file tablestoreCong.json in the home path, and config the parameters.
 ```
-# Linux or mac system: /home/userhome/tablestoreCong.json
-# Windows system: C:\Documents and Settings\%userhome%\tablestoreCong.json
+# Linux or mac system: /home/userhome/tablestoreConf.json
+# Windows system: C:\Documents and Settings\%userhome%\tablestoreConf.json
 {
   "endpoint": "http://instanceName.cn-hangzhou.ots.aliyuncs.com",
   "accessId": "***********",

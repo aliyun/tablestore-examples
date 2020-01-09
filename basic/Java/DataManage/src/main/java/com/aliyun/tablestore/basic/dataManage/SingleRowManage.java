@@ -7,6 +7,7 @@ import com.alicloud.openservices.tablestore.model.condition.SingleColumnValueCon
 import com.aliyun.tablestore.basic.dataManage.base.BaseManage;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import static com.aliyun.tablestore.basic.common.Consts.*;
 
@@ -97,6 +98,7 @@ public class SingleRowManage extends BaseManage {
                 .increment(new Column("long", ColumnValue.fromLong(100L)));		// 原子加
 
         rowChange.setReturnType(ReturnType.RT_AFTER_MODIFY);                            // 获取属性列原子加修改后的值
+        rowChange.addReturnColumn("long");
 
         /**
          * 单列条件过滤：支持等于、大于、大于等于、小于、小于等于
@@ -140,7 +142,6 @@ public class SingleRowManage extends BaseManage {
         System.out.println(String.format("UpdateRowSuccess: \n\tPrimaryKey: %s",
                 updateRowRequest.getRowChange().getPrimaryKey().toString()));
     }
-
 
     public void deleteRow() {
         PrimaryKey primaryKey = PrimaryKeyBuilder.createPrimaryKeyBuilder()

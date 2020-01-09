@@ -36,14 +36,16 @@ public class BaseManage {
         tableOptions.setMaxVersions(MAX_VERSION);
         CreateTableRequest createTableRequest = new CreateTableRequest(tableMeta, tableOptions);
 
+        if (syncClient.listTable().getTableNames().contains(TABLE_NAME)) {
+            System.out.printf("Skipping creating table [%s] because of it already exists.\n", TABLE_NAME);
+            return;
+        }
+
         try {
             syncClient.createTable(createTableRequest);
         } catch (Exception e) {
-            if (!"Requested table already exists.".equals(e.getMessage())) {
-                System.out.println("Init Table Exception: " + e.getMessage());
-                e.printStackTrace();
-                return;
-            }
+            System.out.println("Init Table Exception: " + e.getMessage());
+            throw e;
         }
 
 //        TableMeta tableMeta_Inc = new TableMeta(TABLE_NAME_INC);

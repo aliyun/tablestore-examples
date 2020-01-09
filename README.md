@@ -54,8 +54,8 @@
 ## 完成配置
 在home目录下创建tablestoreCong.json文件，填写相应参数，所有独立项目都会使用该配置
 ```
-# mac 或 linux系统下：/home/userhome/tablestoreCong.json
-# windows系统下: C:\Documents and Settings\%用户名%\tablestoreCong.json
+# mac 或 linux系统下：/home/userhome/tablestoreConf.json
+# windows系统下: C:\Documents and Settings\%用户名%\tablestoreConf.json
 {
   "endpoint": "http://instanceName.cn-hangzhou.ots.aliyuncs.com",
   "accessId": "***********",

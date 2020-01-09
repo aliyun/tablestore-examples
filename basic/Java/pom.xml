@@ -14,13 +14,14 @@
         <module>LocalTransaction</module>
         <module>Common</module>
         <module>DataManage-GetRow</module>
+        <module>TableManage</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>com.aliyun.openservices</groupId>
             <artifactId>tablestore</artifactId>
-            <version>5.3.0</version>
+            <version>5.4.0</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -40,6 +41,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
