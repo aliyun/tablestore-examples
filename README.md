@@ -94,6 +94,7 @@
 [表级别数据复制](https://yq.aliyun.com/articles/706791) | java | [TableCopy](/feature/TableCopy)
 [模糊查询](https://yq.aliyun.com/articles/703707) | java | [FuzzySearch](/feature/FuzzySearch)
 统计聚合 | java | [AggregationAndGroupBy](/feature/AggregationAndGroupBy)
+[Tablestore Spark Demo](/feature/TableStoreSparkDemo/README.md) | scala | [TableStoreSparkDemo](/feature/TableStoreSparkDemo)
 
 ## basic(SDK基础使用)
 功能 | 语言(SDK) | 项目名
