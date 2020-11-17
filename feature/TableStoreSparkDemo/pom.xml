@@ -14,7 +14,7 @@
         <!-- Demo当前为预览版，在项目的libs目录里，正式版本发布后，完成版本替换 -->
         <!-- emr sdk源码地址：https://github.com/aliyun/aliyun-emapreduce-datasources -->
         <emr.version>2.2.0-SNAPSHOT</emr.version>
-        <tablestore.sdk.version>5.10.2</tablestore.sdk.version>
+        <tablestore.sdk.version>5.10.3</tablestore.sdk.version>
     </properties>
 
     <dependencies>
