@@ -32,7 +32,9 @@
 │   ├── TraceMedicine                       #药品监管（溯源）系统
 │   ├── TableStore-Grid                     #气象格点数据解决方案
 │   ├── MailManagement                      #基于Timestream的快递轨迹管理
-│   └── WifiMonitor                         #基于Timestream的Wifi监控系统
+│   ├── WifiMonitor                         #基于Timestream的Wifi监控系统
+│   ├── Orders                              #基于 MySQL + Tablestore 分层存储的大规模订单系统系列测试代码
+│   └── Canal-press                         #基于 MySQL + Tablestore 分层存储的大规模订单系统系列中canal部分压测代码
 │
 ├── tools                                   #工具/产品
 │   ├── Dts-MySQL2TableStore                #MySQL增量数据迁移表格存储
@@ -73,6 +75,8 @@
 ## [demos(场景样例)](/demos)
 样例 | 语言 | 项目名
 --- | --- | ---
+基于 MySQL + Tablestore 分层存储架构的大规模订单系统实践-架构篇 | java | [Orders](/demos/Orders)
+基于 MySQL + Tablestore 分层存储架构的大规模订单系统实践-数据同步 Canal 篇 | java | [Canal-press](/demos/Canal-press)
 [即时聊天系统](https://yq.aliyun.com/articles/710363) | java | [IMChart](/demos/ImChart)
 [共享汽车管理](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [运动轨迹管理](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
@@ -111,8 +115,8 @@
 
 # 5、咨询/答疑/反馈
 ## 联系方式：
-- 钉钉群: 表格存储技术交流群
-- 群号: 11789671
+- 钉钉群: 表格存储技术交流群-2
+- 群号: 23307953
 - 二维码:
 
 ![二维码](image/QRcode.png)

@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+
+
+spring:
+  datasource:
+    jdbcUrl:
+    user:
+    password:
+    driverClass: com.mysql.jdbc.Driver
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*Mapper.xml
+

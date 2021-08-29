@@ -32,7 +32,9 @@
 │   ├── TraceMedicine
 │   ├── TableStore-Grid
 │   ├── MailManagement
-│   └── WifiMonitor
+│   ├── WifiMonitor
+│   ├── Orders                              
+│   └── Canal-press   
 │
 ├── tools                                   #tools
 │   ├── Dts-MySQL2TableStore
@@ -73,6 +75,8 @@ Create the file tablestoreCong.json in the home path, and config the parameters.
 ## [demos(samples)](/demos)
 Sample Name | Language | Project
 --- | --- | ---
+MySQL+Tablestore Order System | java | [Orders](/demos/Orders)
+MySQL+Tablestore Order System Canal | java | [Canal-press](/demos/Canal-press)
 [Instant Chart Room(IM)](https://yq.aliyun.com/articles/710363) | java | [IMChart](/demos/ImChart)
 [Sharing car management](https://yq.aliyun.com/articles/703177) | java | [SharingCarManagement](/demos/SharingCarManagement)
 [Sport track management](https://yq.aliyun.com/articles/702482) | java | [SportTrack](/demos/SportTrack)
@@ -109,8 +113,8 @@ basic usage | java | [basic usage of SDK](/basic/Java)
 
 # 5.Advisory and Feedback
 ## Contact information
-- Dingding Group: Open communication group(Chinese Name: 表格存储技术交流群)
-- Group No.: 11789671
+- DingTalk Group: Open communication group(Chinese Name: 表格存储技术交流群-2)
+- Group No.: 23307953
 - QR code:
 
 ![QR code](image/QRcode.png)
