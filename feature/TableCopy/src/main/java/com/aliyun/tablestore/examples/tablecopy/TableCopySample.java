@@ -1,5 +1,6 @@
 package com.aliyun.tablestore.examples.tablecopy;
 
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -19,6 +20,7 @@ import com.alicloud.openservices.tablestore.model.tunnel.DescribeTunnelRequest;
 import com.alicloud.openservices.tablestore.model.tunnel.DescribeTunnelResponse;
 import com.alicloud.openservices.tablestore.model.tunnel.ListTunnelRequest;
 import com.alicloud.openservices.tablestore.model.tunnel.TunnelInfo;
+import com.alicloud.openservices.tablestore.model.tunnel.TunnelStage;
 import com.alicloud.openservices.tablestore.model.tunnel.TunnelType;
 import com.alicloud.openservices.tablestore.tunnel.worker.TunnelWorker;
 import com.alicloud.openservices.tablestore.tunnel.worker.TunnelWorkerConfig;
@@ -99,14 +101,20 @@ public class TableCopySample {
             }
         }, 0, 2, TimeUnit.SECONDS);
 
-        // 4. begin or continue data copy.
-        if (tunnelId != null) {
-            sourceWorkerConfig = new TunnelWorkerConfig(
-                new OtsReaderProcessor(config.getReadConf(), config.getWriteConf(), destClient));
-            sourceWorkerConfig.setHeartbeatIntervalInSec(15);
-            sourceWorker = new TunnelWorker(tunnelId, sourceTunnelClient, sourceWorkerConfig);
-            sourceWorker.connectAndWorking();
+        while (tunnelInfo == null || TunnelStage.InitBaseDataAndStreamShard.equals(tunnelInfo.getStage())) {
+            tunnelInfos = sourceTunnelClient.listTunnel(
+                new ListTunnelRequest(config.getReadConf().getTableName())).getTunnelInfos();
+            tunnelInfo = getTunnelInfo(config.getReadConf().getTunnelName(), tunnelInfos);
+            System.out.println("Waiting for tunnel init...");
+            Thread.sleep(1000);
         }
+        
+        // 4. begin or continue data copy.
+        sourceWorkerConfig = new TunnelWorkerConfig(
+            new OtsReaderProcessor(config.getReadConf(), config.getWriteConf(), destClient));
+        sourceWorkerConfig.setHeartbeatIntervalInSec(15);
+        sourceWorker = new TunnelWorker(tunnelInfo.getTunnelId(), sourceTunnelClient, sourceWorkerConfig);
+        sourceWorker.connectAndWorking();
     }
 
     private TunnelInfo getTunnelInfo(String tunnelName, List<TunnelInfo> tunnelInfos) {
@@ -140,7 +148,8 @@ public class TableCopySample {
     }
 
     public static void main(String[] args) {
-        String confPath = "config.json";
+        URL url = Thread.currentThread().getContextClassLoader().getResource("config.json");
+        String confPath = url.getFile();
         TableCopySample tableCopySample = new TableCopySample(TableCopyConfig.loadConfig(confPath));
         try {
             tableCopySample.working();
